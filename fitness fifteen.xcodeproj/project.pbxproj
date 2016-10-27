@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D218F951DC2674100723716 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D218F941DC2674100723716 /* GoogleService-Info.plist */; };
+		2D218F971DC27DEB00723716 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2D218F961DC27DEB00723716 /* Podfile */; };
+		2D3049D41DC1623800314D7B /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3049D21DC1623800314D7B /* SigninViewController.swift */; };
+		2D3049D51DC1623800314D7B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3049D31DC1623800314D7B /* SigninViewController.xib */; };
+		2DDB76701DC10BFC00892557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB766F1DC10BFC00892557 /* AppDelegate.swift */; };
+		2DDB76781DC10BFC00892557 /* fitness_fifteen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76761DC10BFC00892557 /* fitness_fifteen.xcdatamodeld */; };
+		2DDB767A1DC10BFC00892557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB76791DC10BFC00892557 /* Assets.xcassets */; };
+		2DDB767D1DC10BFC00892557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB767B1DC10BFC00892557 /* LaunchScreen.storyboard */; };
+		2DDB76881DC10BFC00892557 /* fitness_fifteenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76871DC10BFC00892557 /* fitness_fifteenTests.swift */; };
+		2DDB76931DC10BFC00892557 /* fitness_fifteenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76921DC10BFC00892557 /* fitness_fifteenUITests.swift */; };
+		2DDB76A21DC1122500892557 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76A01DC1122500892557 /* LoginViewController.swift */; };
+		2DDB76A31DC1122500892557 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB76A11DC1122500892557 /* LoginViewController.xib */; };
+		479D608D01235B37F0922440 /* libPods-fitness fifteen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D68FC380680814339A90C23 /* libPods-fitness fifteen.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DDB76841DC10BFC00892557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DDB76641DC10BFC00892557 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DDB766B1DC10BFC00892557;
+			remoteInfo = "fitness fifteen";
+		};
+		2DDB768F1DC10BFC00892557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DDB76641DC10BFC00892557 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DDB766B1DC10BFC00892557;
+			remoteInfo = "fitness fifteen";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D218F941DC2674100723716 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D218F961DC27DEB00723716 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2D218F9B1DC2834A00723716 /* fitness fifteen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fitness fifteen.entitlements"; sourceTree = "<group>"; };
+		2D3049D21DC1623800314D7B /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		2D3049D31DC1623800314D7B /* SigninViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
+		2DDB766C1DC10BFC00892557 /* fitness fifteen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fitness fifteen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DDB766F1DC10BFC00892557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DDB76771DC10BFC00892557 /* fitness_fifteen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fitness_fifteen.xcdatamodel; sourceTree = "<group>"; };
+		2DDB76791DC10BFC00892557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DDB767C1DC10BFC00892557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DDB767E1DC10BFC00892557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DDB76831DC10BFC00892557 /* fitness fifteenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fitness fifteenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DDB76871DC10BFC00892557 /* fitness_fifteenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitness_fifteenTests.swift; sourceTree = "<group>"; };
+		2DDB76891DC10BFC00892557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DDB768E1DC10BFC00892557 /* fitness fifteenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fitness fifteenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DDB76921DC10BFC00892557 /* fitness_fifteenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitness_fifteenUITests.swift; sourceTree = "<group>"; };
+		2DDB76941DC10BFC00892557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DDB76A01DC1122500892557 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DDB76A11DC1122500892557 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7CADA1703260A78C1CC51733 /* Pods-fitness fifteen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitness fifteen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitness fifteen/Pods-fitness fifteen.debug.xcconfig"; sourceTree = "<group>"; };
+		8D68FC380680814339A90C23 /* libPods-fitness fifteen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fitness fifteen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02D91F67208FCEF78B94781 /* Pods-fitness fifteen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitness fifteen.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitness fifteen/Pods-fitness fifteen.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DDB76691DC10BFC00892557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D608D01235B37F0922440 /* libPods-fitness fifteen.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDB76801DC10BFC00892557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDB768B1DC10BFC00892557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D218F981DC27F8700723716 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB766F1DC10BFC00892557 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2D218F991DC27F9F00723716 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				2D218F961DC27DEB00723716 /* Podfile */,
+				2DDB76791DC10BFC00892557 /* Assets.xcassets */,
+				2DDB767B1DC10BFC00892557 /* LaunchScreen.storyboard */,
+				2DDB767E1DC10BFC00892557 /* Info.plist */,
+				2DDB76761DC10BFC00892557 /* fitness_fifteen.xcdatamodeld */,
+				2D218F941DC2674100723716 /* GoogleService-Info.plist */,
+			);
+			name = "supporting files";
+			sourceTree = "<group>";
+		};
+		2D218F9A1DC27FDF00723716 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB76A01DC1122500892557 /* LoginViewController.swift */,
+				2DDB76A11DC1122500892557 /* LoginViewController.xib */,
+				2D3049D21DC1623800314D7B /* SigninViewController.swift */,
+				2D3049D31DC1623800314D7B /* SigninViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		2DDB76631DC10BFC00892557 = {
+			isa = PBXGroup;
+			children = (
+				2DDB766E1DC10BFC00892557 /* fitness fifteen */,
+				2DDB76861DC10BFC00892557 /* fitness fifteenTests */,
+				2DDB76911DC10BFC00892557 /* fitness fifteenUITests */,
+				2DDB766D1DC10BFC00892557 /* Products */,
+				8C69B821C551A8651B882F68 /* Pods */,
+				EF64F66DA8A5A768D17D0DB7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2DDB766D1DC10BFC00892557 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB766C1DC10BFC00892557 /* fitness fifteen.app */,
+				2DDB76831DC10BFC00892557 /* fitness fifteenTests.xctest */,
+				2DDB768E1DC10BFC00892557 /* fitness fifteenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DDB766E1DC10BFC00892557 /* fitness fifteen */ = {
+			isa = PBXGroup;
+			children = (
+				2D218F9B1DC2834A00723716 /* fitness fifteen.entitlements */,
+				2D218F9A1DC27FDF00723716 /* Login */,
+				2D218F991DC27F9F00723716 /* supporting files */,
+				2D218F981DC27F8700723716 /* AppDelegate */,
+			);
+			path = "fitness fifteen";
+			sourceTree = "<group>";
+		};
+		2DDB76861DC10BFC00892557 /* fitness fifteenTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB76871DC10BFC00892557 /* fitness_fifteenTests.swift */,
+				2DDB76891DC10BFC00892557 /* Info.plist */,
+			);
+			path = "fitness fifteenTests";
+			sourceTree = "<group>";
+		};
+		2DDB76911DC10BFC00892557 /* fitness fifteenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB76921DC10BFC00892557 /* fitness_fifteenUITests.swift */,
+				2DDB76941DC10BFC00892557 /* Info.plist */,
+			);
+			path = "fitness fifteenUITests";
+			sourceTree = "<group>";
+		};
+		8C69B821C551A8651B882F68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CADA1703260A78C1CC51733 /* Pods-fitness fifteen.debug.xcconfig */,
+				F02D91F67208FCEF78B94781 /* Pods-fitness fifteen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF64F66DA8A5A768D17D0DB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D68FC380680814339A90C23 /* libPods-fitness fifteen.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DDB766B1DC10BFC00892557 /* fitness fifteen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DDB76971DC10BFC00892557 /* Build configuration list for PBXNativeTarget "fitness fifteen" */;
+			buildPhases = (
+				C825DB10251AC8086156BBBF /* [CP] Check Pods Manifest.lock */,
+				2DDB76681DC10BFC00892557 /* Sources */,
+				2DDB76691DC10BFC00892557 /* Frameworks */,
+				2DDB766A1DC10BFC00892557 /* Resources */,
+				2169A45ECE3362E3B95ADB4A /* [CP] Embed Pods Frameworks */,
+				33DE1585B99490FA792EF820 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fitness fifteen";
+			productName = "fitness fifteen";
+			productReference = 2DDB766C1DC10BFC00892557 /* fitness fifteen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DDB76821DC10BFC00892557 /* fitness fifteenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DDB769A1DC10BFC00892557 /* Build configuration list for PBXNativeTarget "fitness fifteenTests" */;
+			buildPhases = (
+				2DDB767F1DC10BFC00892557 /* Sources */,
+				2DDB76801DC10BFC00892557 /* Frameworks */,
+				2DDB76811DC10BFC00892557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DDB76851DC10BFC00892557 /* PBXTargetDependency */,
+			);
+			name = "fitness fifteenTests";
+			productName = "fitness fifteenTests";
+			productReference = 2DDB76831DC10BFC00892557 /* fitness fifteenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DDB768D1DC10BFC00892557 /* fitness fifteenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DDB769D1DC10BFC00892557 /* Build configuration list for PBXNativeTarget "fitness fifteenUITests" */;
+			buildPhases = (
+				2DDB768A1DC10BFC00892557 /* Sources */,
+				2DDB768B1DC10BFC00892557 /* Frameworks */,
+				2DDB768C1DC10BFC00892557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DDB76901DC10BFC00892557 /* PBXTargetDependency */,
+			);
+			name = "fitness fifteenUITests";
+			productName = "fitness fifteenUITests";
+			productReference = 2DDB768E1DC10BFC00892557 /* fitness fifteenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DDB76641DC10BFC00892557 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Hao Tang";
+				TargetAttributes = {
+					2DDB766B1DC10BFC00892557 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = F6RGB6U5X7;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					2DDB76821DC10BFC00892557 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2DDB766B1DC10BFC00892557;
+					};
+					2DDB768D1DC10BFC00892557 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2DDB766B1DC10BFC00892557;
+					};
+				};
+			};
+			buildConfigurationList = 2DDB76671DC10BFC00892557 /* Build configuration list for PBXProject "fitness fifteen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DDB76631DC10BFC00892557;
+			productRefGroup = 2DDB766D1DC10BFC00892557 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DDB766B1DC10BFC00892557 /* fitness fifteen */,
+				2DDB76821DC10BFC00892557 /* fitness fifteenTests */,
+				2DDB768D1DC10BFC00892557 /* fitness fifteenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DDB766A1DC10BFC00892557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D218F971DC27DEB00723716 /* Podfile in Resources */,
+				2D3049D51DC1623800314D7B /* SigninViewController.xib in Resources */,
+				2DDB767D1DC10BFC00892557 /* LaunchScreen.storyboard in Resources */,
+				2D218F951DC2674100723716 /* GoogleService-Info.plist in Resources */,
+				2DDB767A1DC10BFC00892557 /* Assets.xcassets in Resources */,
+				2DDB76A31DC1122500892557 /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDB76811DC10BFC00892557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDB768C1DC10BFC00892557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2169A45ECE3362E3B95ADB4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitness fifteen/Pods-fitness fifteen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33DE1585B99490FA792EF820 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fitness fifteen/Pods-fitness fifteen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C825DB10251AC8086156BBBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DDB76681DC10BFC00892557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DDB76A21DC1122500892557 /* LoginViewController.swift in Sources */,
+				2D3049D41DC1623800314D7B /* SigninViewController.swift in Sources */,
+				2DDB76781DC10BFC00892557 /* fitness_fifteen.xcdatamodeld in Sources */,
+				2DDB76701DC10BFC00892557 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDB767F1DC10BFC00892557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DDB76881DC10BFC00892557 /* fitness_fifteenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDB768A1DC10BFC00892557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DDB76931DC10BFC00892557 /* fitness_fifteenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DDB76851DC10BFC00892557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DDB766B1DC10BFC00892557 /* fitness fifteen */;
+			targetProxy = 2DDB76841DC10BFC00892557 /* PBXContainerItemProxy */;
+		};
+		2DDB76901DC10BFC00892557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DDB766B1DC10BFC00892557 /* fitness fifteen */;
+			targetProxy = 2DDB768F1DC10BFC00892557 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DDB767B1DC10BFC00892557 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DDB767C1DC10BFC00892557 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DDB76951DC10BFC00892557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DDB76961DC10BFC00892557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DDB76981DC10BFC00892557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CADA1703260A78C1CC51733 /* Pods-fitness fifteen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "fitness fifteen/fitness fifteen.entitlements";
+				DEVELOPMENT_TEAM = F6RGB6U5X7;
+				INFOPLIST_FILE = "fitness fifteen/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2DDB76991DC10BFC00892557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F02D91F67208FCEF78B94781 /* Pods-fitness fifteen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "fitness fifteen/fitness fifteen.entitlements";
+				DEVELOPMENT_TEAM = F6RGB6U5X7;
+				INFOPLIST_FILE = "fitness fifteen/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2DDB769B1DC10BFC00892557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "fitness fifteenTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitness fifteen.app/fitness fifteen";
+			};
+			name = Debug;
+		};
+		2DDB769C1DC10BFC00892557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "fitness fifteenTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitness fifteen.app/fitness fifteen";
+			};
+			name = Release;
+		};
+		2DDB769E1DC10BFC00892557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "fitness fifteenUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "fitness fifteen";
+			};
+			name = Debug;
+		};
+		2DDB769F1DC10BFC00892557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "fitness fifteenUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "fitness fifteen";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DDB76671DC10BFC00892557 /* Build configuration list for PBXProject "fitness fifteen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DDB76951DC10BFC00892557 /* Debug */,
+				2DDB76961DC10BFC00892557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DDB76971DC10BFC00892557 /* Build configuration list for PBXNativeTarget "fitness fifteen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DDB76981DC10BFC00892557 /* Debug */,
+				2DDB76991DC10BFC00892557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DDB769A1DC10BFC00892557 /* Build configuration list for PBXNativeTarget "fitness fifteenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DDB769B1DC10BFC00892557 /* Debug */,
+				2DDB769C1DC10BFC00892557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DDB769D1DC10BFC00892557 /* Build configuration list for PBXNativeTarget "fitness fifteenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DDB769E1DC10BFC00892557 /* Debug */,
+				2DDB769F1DC10BFC00892557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2DDB76761DC10BFC00892557 /* fitness_fifteen.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DDB76771DC10BFC00892557 /* fitness_fifteen.xcdatamodel */,
+			);
+			currentVersion = 2DDB76771DC10BFC00892557 /* fitness_fifteen.xcdatamodel */;
+			path = fitness_fifteen.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2DDB76641DC10BFC00892557 /* Project object */;
+}

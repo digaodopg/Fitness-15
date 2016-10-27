@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="fitness_fifteen" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="SfQ-Cx-aX6" id="XfW-A9-hCf"/>
+                <outlet property="passwordTextField" destination="5dU-rU-dWK" id="oFt-1h-Cwm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness 15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-1W-M4H">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="232" id="fhB-gv-aa0"/>
+                        <constraint firstAttribute="height" constant="67" id="wHE-gq-dI9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dU-rU-dWK">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="KnG-DA-zSN"/>
+                        <constraint firstAttribute="width" constant="225" id="VIU-70-tlu"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CII-KG-FtF">
+                    <color key="backgroundColor" red="0.99160850050000005" green="0.58425903320000006" blue="0.42443481090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Bzl-lu-Ruz"/>
+                        <constraint firstAttribute="width" constant="225" id="MGI-kO-MrR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                    <state key="normal" title="LOGIN">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnLoginPressed:" destination="-1" eventType="touchUpInside" id="Eag-HQ-fA2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCs-eF-1WK">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2B7-Nx-iSQ"/>
+                        <constraint firstAttribute="width" constant="333" id="sR9-0E-xEK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                    <state key="normal" title="Not a member? Get registered in Fitness 15 now!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRegisterPressed" destination="-1" eventType="touchUpInside" id="Kxw-28-WG9"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-Cx-aX6">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4vG-Xf-767"/>
+                        <constraint firstAttribute="width" constant="225" id="gef-xp-wCn"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.14879700541496277" green="0.6596829891204834" blue="0.44506227970123291" alpha="0.80555224240000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vm9-1W-M4H" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="115" id="9bz-C6-f0a"/>
+                <constraint firstItem="UCs-eF-1WK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SQe-kg-sr3"/>
+                <constraint firstItem="5dU-rU-dWK" firstAttribute="top" secondItem="SfQ-Cx-aX6" secondAttribute="bottom" constant="8" id="Zts-4B-MaN"/>
+                <constraint firstItem="CII-KG-FtF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c0x-Wa-TOl"/>
+                <constraint firstItem="UCs-eF-1WK" firstAttribute="top" secondItem="CII-KG-FtF" secondAttribute="bottom" constant="55" id="cfc-Ze-ap6"/>
+                <constraint firstItem="5dU-rU-dWK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gbz-lB-cCD"/>
+                <constraint firstItem="SfQ-Cx-aX6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hin-Z4-Kwq"/>
+                <constraint firstItem="Vm9-1W-M4H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iqs-Pc-Ndm"/>
+                <constraint firstItem="SfQ-Cx-aX6" firstAttribute="top" secondItem="Vm9-1W-M4H" secondAttribute="bottom" constant="109" id="nfh-RD-Lew"/>
+                <constraint firstItem="CII-KG-FtF" firstAttribute="top" secondItem="5dU-rU-dWK" secondAttribute="bottom" constant="29" id="vtG-mS-FxZ"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
