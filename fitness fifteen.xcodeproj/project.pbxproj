@@ -19,7 +19,7 @@
 		2DDB76931DC10BFC00892557 /* fitness_fifteenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76921DC10BFC00892557 /* fitness_fifteenUITests.swift */; };
 		2DDB76A21DC1122500892557 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76A01DC1122500892557 /* LoginViewController.swift */; };
 		2DDB76A31DC1122500892557 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB76A11DC1122500892557 /* LoginViewController.xib */; };
-		479D608D01235B37F0922440 /* libPods-fitness fifteen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D68FC380680814339A90C23 /* libPods-fitness fifteen.a */; };
+		FED2E4D94198E1A19E323974 /* Pods_fitness_fifteen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E5EEBA6903BFA1DCA7A58D /* Pods_fitness_fifteen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26E5EEBA6903BFA1DCA7A58D /* Pods_fitness_fifteen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitness_fifteen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D218F941DC2674100723716 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D218F961DC27DEB00723716 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2D218F9B1DC2834A00723716 /* fitness fifteen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fitness fifteen.entitlements"; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		2DDB76A01DC1122500892557 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DDB76A11DC1122500892557 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		7CADA1703260A78C1CC51733 /* Pods-fitness fifteen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitness fifteen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitness fifteen/Pods-fitness fifteen.debug.xcconfig"; sourceTree = "<group>"; };
-		8D68FC380680814339A90C23 /* libPods-fitness fifteen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fitness fifteen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02D91F67208FCEF78B94781 /* Pods-fitness fifteen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitness fifteen.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitness fifteen/Pods-fitness fifteen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				479D608D01235B37F0922440 /* libPods-fitness fifteen.a in Frameworks */,
+				FED2E4D94198E1A19E323974 /* Pods_fitness_fifteen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +101,7 @@
 		2D218F991DC27F9F00723716 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				2D218F9B1DC2834A00723716 /* fitness fifteen.entitlements */,
 				2D218F961DC27DEB00723716 /* Podfile */,
 				2DDB76791DC10BFC00892557 /* Assets.xcassets */,
 				2DDB767B1DC10BFC00892557 /* LaunchScreen.storyboard */,
@@ -147,7 +148,6 @@
 		2DDB766E1DC10BFC00892557 /* fitness fifteen */ = {
 			isa = PBXGroup;
 			children = (
-				2D218F9B1DC2834A00723716 /* fitness fifteen.entitlements */,
 				2D218F9A1DC27FDF00723716 /* Login */,
 				2D218F991DC27F9F00723716 /* supporting files */,
 				2D218F981DC27F8700723716 /* AppDelegate */,
@@ -185,7 +185,7 @@
 		EF64F66DA8A5A768D17D0DB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D68FC380680814339A90C23 /* libPods-fitness fifteen.a */,
+				26E5EEBA6903BFA1DCA7A58D /* Pods_fitness_fifteen.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -534,6 +534,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "fitness fifteen/fitness fifteen.entitlements";
 				DEVELOPMENT_TEAM = F6RGB6U5X7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "fitness fifteen/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteen";
@@ -549,6 +553,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "fitness fifteen/fitness fifteen.entitlements";
 				DEVELOPMENT_TEAM = F6RGB6U5X7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "fitness fifteen/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Washu.fitness-fifteen";

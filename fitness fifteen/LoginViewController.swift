@@ -25,13 +25,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLoginPressed(_ sender: AnyObject) {
         
-        FIRAuth.auth()!.signIn(withEmail: emailTextField.text!,
-                               password: passwordTextField.text!)
+        FIRAuth.auth()!.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!)
         
     }
     
 
     @IBAction func btnRegisterPressed() {
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
         
         let vc = SigninViewController(nibName: "SigninViewController", bundle: nil)
         
