@@ -27,6 +27,12 @@ class LoginViewController: UIViewController {
         
         FIRAuth.auth()!.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!)
         
+        let tabvc = TabBarController()
+        
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appdelegate.window!.rootViewController = tabvc
+        
     }
     
 
