@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import FacebookLogin
+import FirebaseAuth
 
 class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.green
-        self.title = "item1"
-        print("item 1 loaded")
+//        view.backgroundColor = UIColor.green
+        self.title = "SETTINGS"
+        print("item 4 loaded")
     }
 
+    @IBAction func logoutBtnPressed(_ sender: UIButton) {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        try! FIRAuth.auth()!.signOut()
+    }
 }

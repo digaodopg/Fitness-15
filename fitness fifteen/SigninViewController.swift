@@ -56,9 +56,14 @@ class SigninViewController: UIViewController {
                             loginManager.logOut()
                         case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                             let credential = FIRFacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+                            print(credential)
+                            
                             FIRAuth.auth()?.currentUser?.link(with: credential) { (user, error) in
                                 // ...
                                 print("facebook authentication")
+                                if(error != nil){
+                                    print("You have logined with same facebook acount")
+                                }
                             }
                             print("Logged in!")
                     }
