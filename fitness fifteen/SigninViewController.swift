@@ -47,6 +47,8 @@ class SigninViewController: UIViewController {
                 let loginManager = LoginManager()
                 
                 loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+                    print(loginResult)
+                    
                     switch loginResult {
                         
                         case .failed(let error):
@@ -56,7 +58,10 @@ class SigninViewController: UIViewController {
                             loginManager.logOut()
                         case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                             let credential = FIRFacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-                            print(credential)
+                            
+                            print("GRANTED PERMISSIONS: \(grantedPermissions)")
+                            print("DECLINED PERMISSIONS: \(declinedPermissions)")
+                            print("ACCESS TOKEN \(accessToken)")
                             
                             FIRAuth.auth()?.currentUser?.link(with: credential) { (user, error) in
                                 // ...
@@ -64,6 +69,11 @@ class SigninViewController: UIViewController {
                                 if(error != nil){
                                     print("You have logined with same facebook acount")
                                 }
+                                let tabvc = TabBarController()
+                                
+                                let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                                
+                                appdelegate.window!.rootViewController = tabvc
                             }
                             print("Logged in!")
                     }

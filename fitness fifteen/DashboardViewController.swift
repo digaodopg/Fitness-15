@@ -22,13 +22,6 @@ class DashboardViewController: UIViewController {
         self.title = "DASHBOARD"
         print("item 1 loaded")
         
-        if let user = FIRAuth.auth()?.currentUser {
-            
-        } else {
-            print("User did not log in")
-        }
-        
-        
         if (AccessToken.current) != nil {
             let params = ["fields" : "email, name"]
             let graphRequest = GraphRequest(graphPath: "me", parameters: params)
@@ -36,22 +29,23 @@ class DashboardViewController: UIViewController {
                 (urlResponse, requestResult) in
                 
                 switch requestResult {
-                case .failed(let error):
-                    print("error in graph request:", error)
-                    break
-                case .success(let graphResponse):
-                    if let responseDictionary = graphResponse.dictionaryValue {
-                        print(responseDictionary)
-                        
-                        print(responseDictionary["name"])
-                        print(responseDictionary["email"])
-                    }
+                    case .failed(let error):
+                        print("error in graph request:", error)
+                        break
+                    case .success(let graphResponse):
+                        if let responseDictionary = graphResponse.dictionaryValue {
+                            print(responseDictionary)
+                            
+                            print(responseDictionary["name"])
+                        }
                 }
             }
         }else{
-            print("No one log in for Facebook!")
+            print("No one logged in for Facebook!")
         }
         
     }
+    
+    
 
 }

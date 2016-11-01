@@ -21,8 +21,14 @@ class SettingViewController: UIViewController {
     }
 
     @IBAction func logoutBtnPressed(_ sender: UIButton) {
-        let loginManager = LoginManager()
-        loginManager.logOut()
+        
+//        let loginManager = LoginManager()
+//        loginManager.logOut()
         try! FIRAuth.auth()!.signOut()
+        
+        //log out move to login view
+        let loginvc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window!.rootViewController = loginvc
     }
 }
