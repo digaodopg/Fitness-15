@@ -22,8 +22,16 @@ class DashboardViewController: UIViewController {
         self.title = "DASHBOARD"
         print("item 1 loaded")
         
+        if let user = FIRAuth.auth()?.currentUser {
+            // User is signed in.
+            print(user)
+        } else {
+            // No user is signed in.
+            print("No user signed in ")
+        }
+        
         if (AccessToken.current) != nil {
-            let params = ["fields" : "email, name"]
+            let params = ["fields" : "id, email, name"]
             let graphRequest = GraphRequest(graphPath: "me", parameters: params)
             graphRequest.start {
                 (urlResponse, requestResult) in

@@ -46,7 +46,7 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWk-6u-k9N">
-                    <color key="backgroundColor" red="0.99160850050000005" green="0.58425903320000006" blue="0.42443481090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.14879700541496277" green="0.6596829891204834" blue="0.44506227970123291" alpha="0.80555224240000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="EMk-r2-VNp"/>
                         <constraint firstAttribute="width" constant="224" id="and-Xo-x6f"/>
@@ -74,7 +74,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.14879700541496277" green="0.6596829891204834" blue="0.44506227970123291" alpha="0.80555224240000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99160850050000005" green="0.58425903320000006" blue="0.42443481090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="NvD-T9-PFn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="123" id="1Lb-TO-XWY"/>
                 <constraint firstItem="KWk-6u-k9N" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6Zo-Cd-wpV"/>
