@@ -15,7 +15,6 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        view.backgroundColor = UIColor.green
         self.title = "SETTINGS"
         print("item 4 loaded")
     }

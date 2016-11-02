@@ -46,45 +46,44 @@ class SigninViewController: UIViewController {
             }
         }
         
-        emailField.text = ""
-        passwordField.text = ""
-        
         let loginManager = LoginManager()
+        loginManager.logOut()
         
         loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
-            print(loginResult)
-            
             switch loginResult {
-                
-            case .failed(let error):
-                print(error)
-            case .cancelled:
-                print("User cancelled login.")
-                loginManager.logOut()
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-                
-                print("GRANTED PERMISSIONS: \(grantedPermissions)")
-                print("DECLINED PERMISSIONS: \(declinedPermissions)")
-                print("ACCESS TOKEN \(accessToken)")
-                
-                FIRAuth.auth()?.currentUser?.link(with: credential) { (user, error) in
-                    // ...
-                    print("facebook authentication")
-                    if(error != nil){
-                        print("You have logined with same facebook acount")
+                case .failed(let error):
+                    print(error)
+                case .cancelled:
+                    print("User cancelled login.")
+                case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                    
+                    let credential = FIRFacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+                    
+                    print("GRANTED PERMISSIONS: \(grantedPermissions)")
+                    print("DECLINED PERMISSIONS: \(declinedPermissions)")
+                    print("ACCESS TOKEN \(accessToken)")
+                    
+                    FIRAuth.auth()?.currentUser?.link(with: credential) { (user, error) in
+                        if(error != nil){
+                            print("You have logined with same facebook acount")
+                            let user = FIRAuth.auth()?.currentUser
+                            user?.delete()
+                            //regenerate sign in view
+                            return
+                        }
+                        
+                        
                     }
                     
+                    self.dismiss(animated: true, completion: nil)
+                
                     let tabvc = TabBarController()
                     let appdelegate = UIApplication.shared.delegate as! AppDelegate
                     appdelegate.window!.rootViewController = tabvc
-                }
-                print("Logged in!")
-                
             }
         }
         
-
+        
     }
+    
 }

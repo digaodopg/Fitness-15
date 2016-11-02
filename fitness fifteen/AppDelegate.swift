@@ -35,7 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     public func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
     {
-        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        if #available(iOS 9.0, *) {
+            return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        } else {
+            // Fallback on earlier versions
+            return true
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -64,6 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
+    @available(iOS 10.0, *)
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation

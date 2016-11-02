@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FacebookLogin
-import FacebookShare
+import FacebookCore
 
 
 class LoginViewController: UIViewController {
@@ -30,76 +30,50 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text!
         let password = passwordTextField.text!
         
-        emailTextField.text = ""
-        passwordTextField.text = ""
-        
         FIRAuth.auth()!.signIn(withEmail: email, password: password) { (user, error) in
             
             if user != nil {
                 
-//                let loginManager = LoginManager()
-//                
-//                loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
-//                    print(loginResult)
-//                    
-//                    switch loginResult {
-//                        
-//                    case .failed(let error):
-//                        print(error)
-//                    case .cancelled:
-//                        print("User cancelled login.")
-//                        loginManager.logOut()
-//                    case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-//                        
-//                        let credential = FIRFacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-//                        
-//                        print("GRANTED PERMISSIONS: \(grantedPermissions)")
-//                        print("DECLINED PERMISSIONS: \(declinedPermissions)")
-//                        print("ACCESS TOKEN \(accessToken)")
-//                        
-//                        FIRAuth.auth()?.currentUser?.link(with: credential) { (user, error) in
-//                            // ...
-//                            print("facebook authentication")
-//                            if(error != nil){
-//                                print("You have logined with same facebook acount")
-//                            }
-//                            
-//                            let tabvc = TabBarController()
-//                            let appdelegate = UIApplication.shared.delegate as! AppDelegate
-//                            appdelegate.window!.rootViewController = tabvc
-//                        }
-//                        print("Logged in!")
-//                        
-//                    }
-//                }
+                if (AccessToken.current) == nil{
+                    let loginManager = LoginManager()
+                    loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+                        switch loginResult {
+                        case .failed(let error):
+                            print(error)
+                        case .cancelled:
+                            print("User cancelled login.")
+                            loginManager.logOut()
+                        case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                            
+                            print("GRANTED PERMISSIONS: \(grantedPermissions)")
+                            print("DECLINED PERMISSIONS: \(declinedPermissions)")
+                            print("ACCESS TOKEN \(accessToken)")
+                        }
+                    }
+                }
                 
                 let tabvc = TabBarController()
-                
                 let appdelegate = UIApplication.shared.delegate as! AppDelegate
-                
                 appdelegate.window!.rootViewController = tabvc
                 
             } else {
-                
                 print(error)
             }
             
             
         }
         
-        
-        
     }
     
 
     @IBAction func btnRegisterPressed() {
         
+        let vc = SigninViewController(nibName: "SigninViewController", bundle: nil)
+        present(vc, animated: true, completion: nil)
+        
+        //clear email field and password field
         emailTextField.text = ""
         passwordTextField.text = ""
-        
-        let vc = SigninViewController(nibName: "SigninViewController", bundle: nil)
-        
-        present(vc, animated: true, completion: nil)
     }
     
 }
