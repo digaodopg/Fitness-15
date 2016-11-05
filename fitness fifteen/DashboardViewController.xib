@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController" customModule="fitness_fifteen" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Ugf-xI-yRG" id="ODR-s9-66D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +23,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f66-sp-hl1">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="207" id="Vwj-lR-xzf"/>
+                        <constraint firstAttribute="height" constant="187" id="Vwj-lR-xzf"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hw5-mg-Ljy">
                         <size key="itemSize" width="50" height="50"/>
@@ -34,9 +35,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="f66-sp-hl1" secondAttribute="bottom" id="6YQ-HC-aQM"/>
+                <constraint firstAttribute="bottom" secondItem="f66-sp-hl1" secondAttribute="bottom" constant="20" id="6YQ-HC-aQM"/>
                 <constraint firstItem="Ugf-xI-yRG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dh2-PB-x1H"/>
-                <constraint firstItem="Ugf-xI-yRG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EEe-TY-3Id"/>
+                <constraint firstItem="Ugf-xI-yRG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="EEe-TY-3Id"/>
                 <constraint firstItem="Ugf-xI-yRG" firstAttribute="trailing" secondItem="f66-sp-hl1" secondAttribute="trailing" id="N8H-CJ-Jds"/>
                 <constraint firstItem="Ugf-xI-yRG" firstAttribute="leading" secondItem="f66-sp-hl1" secondAttribute="leading" id="NbA-nH-JXM"/>
                 <constraint firstAttribute="trailing" secondItem="Ugf-xI-yRG" secondAttribute="trailing" id="Rdi-cG-LFE"/>

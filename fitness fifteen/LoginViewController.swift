@@ -34,27 +34,35 @@ class LoginViewController: UIViewController {
             
             if user != nil {
                 
-                if (AccessToken.current) == nil{
+                if AccessToken.current == nil{
+                    print("User did not login with Facebook")
                     let loginManager = LoginManager()
-                    loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+                    loginManager.logIn([ .publicProfile, .userFriends ], viewController: self) { loginResult in
                         switch loginResult {
                         case .failed(let error):
                             print(error)
+                            return
                         case .cancelled:
                             print("User cancelled login.")
-                            loginManager.logOut()
+                            return
                         case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                             
                             print("GRANTED PERMISSIONS: \(grantedPermissions)")
                             print("DECLINED PERMISSIONS: \(declinedPermissions)")
                             print("ACCESS TOKEN \(accessToken)")
+                            
+                            let tabvc = TabBarController()
+                            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                            appdelegate.window!.rootViewController = tabvc
                         }
                     }
+                } else {
+                    let tabvc = TabBarController()
+                    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                    appdelegate.window!.rootViewController = tabvc
                 }
                 
-                let tabvc = TabBarController()
-                let appdelegate = UIApplication.shared.delegate as! AppDelegate
-                appdelegate.window!.rootViewController = tabvc
+                
                 
             } else {
                 print(error)

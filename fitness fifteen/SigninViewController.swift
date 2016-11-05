@@ -49,7 +49,7 @@ class SigninViewController: UIViewController {
         let loginManager = LoginManager()
         loginManager.logOut()
         
-        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+        loginManager.logIn([ .publicProfile, .userFriends ], viewController: self) { loginResult in
             switch loginResult {
                 case .failed(let error):
                     print(error)
