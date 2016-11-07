@@ -17,6 +17,11 @@ class DashboardCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        gymImageView.layer.borderWidth = 1
+        gymImageView.layer.masksToBounds = false
+        gymImageView.layer.borderColor = UIColor.black.cgColor
+        gymImageView.layer.cornerRadius = gymImageView.frame.height/2
+        gymImageView.clipsToBounds = true
     }
     
     func loadItem(title: String, imageName: String, gymWebsite: String){
