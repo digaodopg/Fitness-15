@@ -13,10 +13,10 @@ import FacebookShare
 import Firebase
 import FirebaseAuth
 
-class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+class DashboardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var gymCollectionView: UICollectionView!
+    @IBOutlet weak var fbFriendsCollectionView: UICollectionView!
     
     let gymNames = ["WashU Athletic Complex","WashU South 40 gym"]
     let gymImages = ["ac-image.jpg","s40-image.jpg"]
@@ -53,27 +53,25 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             print("No one logged in for Facebook!")
         }
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.gymCollectionView.dataSource = self
+        self.fbFriendsCollectionView.dataSource = self
         
-        let nib = UINib(nibName: "DashboardCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "customCell")
+        self.gymCollectionView.delegate = self
+        self.fbFriendsCollectionView.delegate = self
         
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        let nib1 = UINib(nibName: "DashboardGymViewCell", bundle: nil)
+        self.gymCollectionView.register(nib1, forCellWithReuseIdentifier: "customGymViewCell")
         
-        let newNib = UINib(nibName: "DashboardCollectionViewCell", bundle: nil)
-        self.collectionView.register(newNib, forCellWithReuseIdentifier: "customCollectionCell")
+        let nib2 = UINib(nibName: "DashboardCollectionViewCell", bundle: nil)
+        self.fbFriendsCollectionView.register(nib2, forCellWithReuseIdentifier: "customCollectionCell")
         
         getFacebookFriends()
         
-//        self.collectionView.reloadData()
     }
     
     func getFacebookFriends() {
         
         let params = ["fields": "id, first_name, last_name, middle_name, name, email, picture"]
-//        let request = FBSDKGraphRequest(graphPath: "me/friends", parameters: params)
         let request = GraphRequest(graphPath: "me/friends", parameters: params)
         
         request.start {
@@ -93,14 +91,17 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                         for i in 0..<data.count{
                             let valueDic = data[i] as! NSDictionary
                             self.userFriendsNames.add(valueDic.value(forKey: "name"))
-                            let friendPicture = valueDic.value(forKey: "picture") as! NSDictionary
-                            let data = friendPicture.value(forKey: "data") as! NSDictionary
-                            let urlStr = data.value(forKey: "url")
-                            print("url string is \(urlStr)")
-                            self.userFriendsProfileImages.add(urlStr)
+//                            let friendPicture = valueDic.value(forKey: "picture") as! NSDictionary
+//                            let data = friendPicture.value(forKey: "data") as! NSDictionary
+//                            let urlStr = data.value(forKey: "url")
+//                            print("url string is \(urlStr)")
+//                            self.userFriendsProfileImages.add(urlStr)
+                            let friendId = valueDic.value(forKey: "id") as! String
+                            let str = "https://graph.facebook.com/" + friendId + "/picture?type=large"
+                            self.userFriendsProfileImages.add(str)
                             
                         }
-                        self.collectionView.reloadData()
+                        self.fbFriendsCollectionView.reloadData()
                     }
             }
         }
@@ -109,42 +110,43 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gymNames.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 209
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = self.tableView.dequeueReusableCell(withIdentifier: "customCell") as! DashboardCell
-        
-        myCell.loadItem(title: gymNames[indexPath.row], imageName: gymImages[indexPath.row], gymWebsite: gymWebsites[indexPath.row])
-        
-        return myCell
-    }
-    
-    
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(self.userFacebookFriends.count)
-        return self.userFacebookFriends.count
+        if collectionView == gymCollectionView {
+            return gymNames.count
+        }
+        return self.userFriendsNames.count
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == self.gymCollectionView {
+            let heightForCell = 194
+            return CGSize(width: gymCollectionView.bounds.size.width, height: CGFloat(heightForCell))
+        } else{
+            let widthForCell = 112
+            let heightForCell = 93
+            return CGSize(width: widthForCell, height: heightForCell)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "customCollectionCell", for: indexPath) as! DashboardCollectionViewCell
+        if collectionView == self.gymCollectionView {
+            
+            let cell = self.gymCollectionView.dequeueReusableCell(withReuseIdentifier: "customGymViewCell", for: indexPath) as! DashboardGymViewCell
+            
+            cell.loadItem(title: gymNames[indexPath.row], imageName: gymImages[indexPath.row], gymWebsite: gymWebsites[indexPath.row])
+            
+            return cell
+            
+        } else {
+            
+            let cell = self.fbFriendsCollectionView.dequeueReusableCell(withReuseIdentifier: "customCollectionCell", for: indexPath) as! DashboardCollectionViewCell
+            
+            cell.loadItems(name: self.userFriendsNames[indexPath.row] as! String, imageUrl: self.userFriendsProfileImages[indexPath.row] as! String)
+            
+            return cell
+        }
         
-//        myCell.loadItems(name: self.userFriendsNames[indexPath.row] as! String, imageUrl: self.userFriendsProfileImages[indexPath.row] as! String)
-        cell.loadItems(name: self.userFriendsNames[indexPath.row] as! String)
-        
-        return cell
     }
     
     

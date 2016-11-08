@@ -16,21 +16,18 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        friendProfilePicture.layer.borderWidth = 0.1
+        friendProfilePicture.layer.masksToBounds = false
+        friendProfilePicture.layer.borderColor = UIColor.black.cgColor
+        friendProfilePicture.layer.cornerRadius = friendProfilePicture.frame.height/2
+        friendProfilePicture.clipsToBounds = true
     }
 
-//    func loadItems(name: String, imageUrl: String){
-//        if let checkedUrl = URL(string: imageUrl) {
-//            friendProfilePicture.contentMode = .scaleAspectFit
-//            downloadImage(url: checkedUrl)
-//        }
-//        self.friendName.text = name
-//    }
-    
-    func loadItems(name: String){
-//        if let checkedUrl = URL(string: imageUrl) {
-//            friendProfilePicture.contentMode = .scaleAspectFit
-//            downloadImage(url: checkedUrl)
-//        }
+    func loadItems(name: String, imageUrl: String){
+        if let checkedUrl = URL(string: imageUrl) {
+            friendProfilePicture.contentMode = .scaleAspectFit
+            downloadImage(url: checkedUrl)
+        }
         self.friendName.text = name
     }
     

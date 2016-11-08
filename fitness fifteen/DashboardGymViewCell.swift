@@ -1,22 +1,24 @@
 //
-//  DashboardCell.swift
+//  DashboardGymViewCell.swift
 //  fitness fifteen
 //
-//  Created by Hao Tang on 11/3/16.
+//  Created by Hao Tang on 11/7/16.
 //  Copyright © 2016 Hao Tang. All rights reserved.
 //
 
 import UIKit
 
-class DashboardCell: UITableViewCell {
-
+class DashboardGymViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var gymNameLabel: UILabel!
     @IBOutlet weak var gymImageView: UIImageView!
     @IBOutlet weak var gymWebsiteLabel: UILabel!
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         gymImageView.layer.borderWidth = 1
         gymImageView.layer.masksToBounds = false
         gymImageView.layer.borderColor = UIColor.black.cgColor
@@ -31,10 +33,4 @@ class DashboardCell: UITableViewCell {
         gymWebsiteLabel.text = gymWebsite
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

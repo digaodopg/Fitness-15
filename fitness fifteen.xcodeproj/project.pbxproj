@@ -11,6 +11,8 @@
 		2D0345671DC9118100D16598 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0345651DC9118100D16598 /* DashboardViewController.xib */; };
 		2D218F951DC2674100723716 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D218F941DC2674100723716 /* GoogleService-Info.plist */; };
 		2D218F971DC27DEB00723716 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2D218F961DC27DEB00723716 /* Podfile */; };
+		2D21F0A51DD0F5E6004E26BE /* DashboardGymViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D21F0A31DD0F5E6004E26BE /* DashboardGymViewCell.swift */; };
+		2D21F0A61DD0F5E6004E26BE /* DashboardGymViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D21F0A41DD0F5E6004E26BE /* DashboardGymViewCell.xib */; };
 		2D3049D41DC1623800314D7B /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3049D21DC1623800314D7B /* SigninViewController.swift */; };
 		2D3049D51DC1623800314D7B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3049D31DC1623800314D7B /* SigninViewController.xib */; };
 		2D3238B81DCFEA75008DCCE0 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3238B61DCFEA75008DCCE0 /* DashboardCollectionViewCell.swift */; };
@@ -18,8 +20,6 @@
 		2D45EF461DC789EC0047B38B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45EF431DC789EC0047B38B /* SettingViewController.swift */; };
 		2D45EF471DC789EC0047B38B /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D45EF441DC789EC0047B38B /* SettingViewController.xib */; };
 		2D45EF481DC789EC0047B38B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45EF451DC789EC0047B38B /* TabBarController.swift */; };
-		2DB972E71DCBDCD900384697 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB972E51DCBDCD900384697 /* DashboardCell.swift */; };
-		2DB972E81DCBDCD900384697 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB972E61DCBDCD900384697 /* DashboardCell.xib */; };
 		2DDB76701DC10BFC00892557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB766F1DC10BFC00892557 /* AppDelegate.swift */; };
 		2DDB76781DC10BFC00892557 /* fitness_fifteen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB76761DC10BFC00892557 /* fitness_fifteen.xcdatamodeld */; };
 		2DDB767A1DC10BFC00892557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB76791DC10BFC00892557 /* Assets.xcassets */; };
@@ -55,6 +55,8 @@
 		2D218F941DC2674100723716 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D218F961DC27DEB00723716 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2D218F9B1DC2834A00723716 /* fitness fifteen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fitness fifteen.entitlements"; sourceTree = "<group>"; };
+		2D21F0A31DD0F5E6004E26BE /* DashboardGymViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardGymViewCell.swift; sourceTree = "<group>"; };
+		2D21F0A41DD0F5E6004E26BE /* DashboardGymViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardGymViewCell.xib; sourceTree = "<group>"; };
 		2D3049D21DC1623800314D7B /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		2D3049D31DC1623800314D7B /* SigninViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
 		2D3238B61DCFEA75008DCCE0 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		2D45EF431DC789EC0047B38B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2D45EF441DC789EC0047B38B /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		2D45EF451DC789EC0047B38B /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		2DB972E51DCBDCD900384697 /* DashboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
-		2DB972E61DCBDCD900384697 /* DashboardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
 		2DDB766C1DC10BFC00892557 /* fitness fifteen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fitness fifteen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDB766F1DC10BFC00892557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDB76771DC10BFC00892557 /* fitness_fifteen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fitness_fifteen.xcdatamodel; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 				2D45EF441DC789EC0047B38B /* SettingViewController.xib */,
 				2D0345641DC9118100D16598 /* DashboardViewController.swift */,
 				2D0345651DC9118100D16598 /* DashboardViewController.xib */,
-				2DB972E51DCBDCD900384697 /* DashboardCell.swift */,
-				2DB972E61DCBDCD900384697 /* DashboardCell.xib */,
+				2D21F0A31DD0F5E6004E26BE /* DashboardGymViewCell.swift */,
+				2D21F0A41DD0F5E6004E26BE /* DashboardGymViewCell.xib */,
 				2D3238B61DCFEA75008DCCE0 /* DashboardCollectionViewCell.swift */,
 				2D3238B71DCFEA75008DCCE0 /* DashboardCollectionViewCell.xib */,
 				2D45EF451DC789EC0047B38B /* TabBarController.swift */,
@@ -341,11 +341,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D21F0A61DD0F5E6004E26BE /* DashboardGymViewCell.xib in Resources */,
 				2D45EF471DC789EC0047B38B /* SettingViewController.xib in Resources */,
 				2D218F971DC27DEB00723716 /* Podfile in Resources */,
 				2D3049D51DC1623800314D7B /* SigninViewController.xib in Resources */,
 				2D0345671DC9118100D16598 /* DashboardViewController.xib in Resources */,
-				2DB972E81DCBDCD900384697 /* DashboardCell.xib in Resources */,
 				2DDB767D1DC10BFC00892557 /* LaunchScreen.storyboard in Resources */,
 				2D218F951DC2674100723716 /* GoogleService-Info.plist in Resources */,
 				2DDB767A1DC10BFC00892557 /* Assets.xcassets in Resources */,
@@ -424,13 +424,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D45EF461DC789EC0047B38B /* SettingViewController.swift in Sources */,
+				2D21F0A51DD0F5E6004E26BE /* DashboardGymViewCell.swift in Sources */,
 				2D0345661DC9118100D16598 /* DashboardViewController.swift in Sources */,
 				2DDB76A21DC1122500892557 /* LoginViewController.swift in Sources */,
 				2D3049D41DC1623800314D7B /* SigninViewController.swift in Sources */,
 				2D3238B81DCFEA75008DCCE0 /* DashboardCollectionViewCell.swift in Sources */,
 				2D45EF481DC789EC0047B38B /* TabBarController.swift in Sources */,
 				2DDB76781DC10BFC00892557 /* fitness_fifteen.xcdatamodeld in Sources */,
-				2DB972E71DCBDCD900384697 /* DashboardCell.swift in Sources */,
 				2DDB76701DC10BFC00892557 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
